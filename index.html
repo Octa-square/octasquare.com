@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Octasquare - GRC & Compliance Consulting</title>
+    <link rel="icon" type="image/png" href="assets/octapng.png">
+    <link rel="apple-touch-icon" href="assets/octapng.png">
     <style>
         * {
             margin: 0;
@@ -42,28 +44,35 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #fff;
-        }
+       .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between logo and text */
+}
 
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+.logo-image {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1); /* Makes logo white if it's dark */
+}
 
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
 
-        .nav-menu a:hover {
-            color: #64b5f6;
-        }
+/* Responsive - hide text on small screens if needed */
+@media (max-width: 480px) {
+    .logo-text {
+        display: none;
+    }
+    .logo-image {
+        height: 35px;
+    }
+}
 
         /* Hero Section */
         .hero {
@@ -362,7 +371,10 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">Octasquare</div>
+                <div class="logo">
+    <img src="assets/octapng.png" alt="Octasquare" class="logo-image">
+    <span class="logo-text">Octasquare</span>
+       </div>
                 <nav>
                     <ul class="nav-menu">
                         <li><a href="#home">Home</a></li>
