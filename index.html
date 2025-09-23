@@ -700,7 +700,11 @@
             <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
                 Ready to strengthen your GRC posture? Let's discuss how we can help transform your organization's compliance challenges into competitive advantages.
             </p>
-            <form class="contact-form">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="60c4b345-d11c-4663-8da7-f8ed7d3086dc">
+                <input type="hidden" name="subject" value="New Contact Form Submission from Octasquare">
+                <input type="hidden" name="from_name" value="Octasquare Website">
+                
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required>
@@ -726,8 +730,9 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Tell us about your GRC needs and challenges..."></textarea>
+                    <textarea id="message" name="message" placeholder="Tell us about your GRC needs and challenges..." required></textarea>
                 </div>
+                
                 <button type="submit" class="cta-button" style="width: 100%; margin-top: 1rem;">Send Message</button>
             </form>
         </div>
